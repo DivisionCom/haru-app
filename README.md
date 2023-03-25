@@ -2,6 +2,8 @@
 
 ## Haru 春
 
+![sakura](https://user-images.githubusercontent.com/107028454/227711237-6a110be5-2605-47ae-8cb3-d4fae2620881.gif)
+
 ### Haru 春 (Весна)
 
 <p>
