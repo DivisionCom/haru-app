@@ -1,6 +1,4 @@
-﻿using Haru.AppData;
-using Haru.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Haru
+namespace Haru.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page_Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page_Login : Page
     {
-        public MainWindow()
+        public Page_Login()
         {
             InitializeComponent();
-
-            FrameObj.frameMain = frmMain;
-            frmMain.Navigate(new Page_Login());
         }
     }
 }

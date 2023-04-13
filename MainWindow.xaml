@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Haru"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Haru" Height="600" Width="1000" MinHeight="600" MinWidth="1000">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#dcd5cf">
+            <Image Source="Resources/haru_logo.png" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding ElementName=frmMain, Path=Content.Title}" Style="{StaticResource Title}" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Right">
+            <TextBlock Name="tblockUserName"
+                       Style="{StaticResource tblockCurrentUser}"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnBack"
+                        Content="Назад"
+                        Style="{StaticResource btnHeader}" />
+                <Button Name="btnExit"
+                    Content="Выйти"
+                    Style="{StaticResource btnHeader}" />
+            </StackPanel>
+        </StackPanel>
         
+        <Frame Grid.Row="1" Name="frmMain" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
