@@ -34,6 +34,48 @@
             <Setter Property="Width" Value="125"/>
             <Setter Property="Height" Value="30"/>
         </Style>
-        
+        <Style TargetType="TextBlock" x:Key="tblockSearch">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="tboxSearch">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="cmbSearch">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="tblockListView">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button" x:Key="btnPag">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#dcd5cf"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
     </Application.Resources>
 </Application>

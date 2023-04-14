@@ -1,0 +1,111 @@
+﻿<Page x:Class="Haru.Pages.PageCatalog"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Haru.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="Каталог товаров">
+    <Page.Resources>
+        <sys:String x:Key="ImageNull">
+            pack://application:,,,/Resources/picture.png
+        </sys:String>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        Orientation="Horizontal">
+                <TextBlock Text="Поиск:"
+                           Style="{StaticResource tblockSearch}"/>
+                <TextBox x:Name="tboxSearch"
+                         Style="{StaticResource tboxSearch}" TextChanged="tboxSearch_TextChanged"/>
+            </StackPanel>
+            <ComboBox Grid.Column="1"
+                      Name="cmbSorting"
+                      Style="{StaticResource cmbSearch}"
+                      DisplayMemberPath="ProductName" SelectionChanged="cmbSorting_SelectionChanged"/>
+            <ComboBox Grid.Column="2"
+                      Name="cmbFiltering"
+                      Style="{StaticResource cmbSearch}"
+                      DisplayMemberPath="ProductName" SelectionChanged="cmbFiltering_SelectionChanged"/>
+        </Grid>
+
+        <ListView Grid.Row="1"
+                  x:Name="ListProducts"
+                  MinWidth="1000"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel>
+                        
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1"
+                            BorderBrush="Black">
+                        <Grid MinWidth="950"
+                              MinHeight="145"
+                              Background="{Binding ColorBrush}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                   Source="{Binding ImageRes, FallbackValue={StaticResource ImageNull}}"
+                                   Width="150"
+                                   Height="100"
+                                   Margin="5"/>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0"
+                                           Text="{Binding ProductName}"
+                                           Style="{StaticResource tblockListView}"/>
+                            </Grid>
+                            <TextBlock Grid.Column="2"
+                                       Text="{Binding DiscountRes}"
+                                       Style="{StaticResource tblockListView}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Button Style="{StaticResource btnPag}"
+                    Content="&lt;&lt;"/>
+            <Button Style="{StaticResource btnPag}"
+                    Content="&lt;"/>
+            <TextBlock x:Name="tbPag"
+                       Style="{StaticResource tblockMain}"/>
+            <Button Style="{StaticResource btnPag}"
+                    Content=">"/>
+            <Button Style="{StaticResource btnPag}"
+                    Content=">>"/>
+        </StackPanel>
+    </Grid>
+</Page>

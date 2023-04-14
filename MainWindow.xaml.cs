@@ -26,8 +26,10 @@ namespace Haru
         {
             InitializeComponent();
 
+            ConnectDB.tradeEntities = new TradeEntities();
+
             FrameObj.frameMain = frmMain;
-            frmMain.Navigate(new Page_Login());
+            frmMain.Navigate(new PageCatalog());
         }
     }
 }

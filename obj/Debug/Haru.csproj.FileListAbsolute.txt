@@ -13,6 +13,12 @@ C:\Users\Asus\source\repos\Haru\obj\Debug\Haru.csproj.GenerateResource.cache
 C:\Users\Asus\source\repos\Haru\obj\Debug\Haru.csproj.CoreCompileInputs.cache
 C:\Users\Asus\source\repos\Haru\obj\Debug\Haru.exe
 C:\Users\Asus\source\repos\Haru\obj\Debug\Haru.pdb
-C:\Users\Asus\source\repos\Haru\obj\Debug\Pages\Page_Login.g.cs
-C:\Users\Asus\source\repos\Haru\obj\Debug\Pages\Page_Login.baml
 C:\Users\Asus\source\repos\Haru\obj\Debug\App.baml
+C:\Users\Asus\source\repos\Haru\bin\Debug\EntityFramework.dll
+C:\Users\Asus\source\repos\Haru\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asus\source\repos\Haru\bin\Debug\EntityFramework.xml
+C:\Users\Asus\source\repos\Haru\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asus\source\repos\Haru\obj\Debug\Pages\PageCatalog.g.cs
+C:\Users\Asus\source\repos\Haru\obj\Debug\Haru_Content.g.cs
+C:\Users\Asus\source\repos\Haru\obj\Debug\Pages\PageCatalog.baml
+C:\Users\Asus\source\repos\Haru\obj\Debug\Haru.csproj.CopyComplete
